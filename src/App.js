@@ -18,7 +18,10 @@ export default class App extends Component {
         {id: '2', isDone: false, name: 'Take a shower'},
         {id: '3', isDone: false, name: 'Brush teeth'},
         {id: '4', isDone: false, name: 'Check email'},
-        {id: '5', isDone: false, name: 'Eat Breakfast'}
+        {id: '5', isDone: false, name: 'Eat Breakfast'},
+        {id: '6', isDone: false, name: 'Get work'},
+        {id: '7', isDone: false, name: 'Buy book'}
+
       ]
     }
     this.addItem          = this.addItem.bind(this)
@@ -65,7 +68,7 @@ export default class App extends Component {
 
         <View style={{flex: 80}}>
           <Input addItem={this.addItem} />
-          <ScrollView >
+          <ScrollView style={{backgroundColor: '#f1f1f1'}}>
             {todoList.map((item, key) => {
               return (
                 <Item id={item.id} 

@@ -3,21 +3,20 @@ import { Text, View, Image, TouchableOpacity } from 'react-native'
 
 export default class Item extends Component {
   render() {
-    const bgColor = this.props.isDone ? '#f1f1f1' : 'white'
+    const color = this.props.isDone ? '#999' : ''
     return (
       
         <View style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingVertical: 10,
+          paddingVertical: 15,
           paddingHorizontal: 20,
-          borderBottomColor: '#f1f1f1',
-          borderBottomWidth: 2,
-          backgroundColor: bgColor,
+          marginBottom: 5,
+          backgroundColor: 'white',
         }}>
           <View>
-            <Text style={{fontSize: 16,}}>{this.props.name}</Text>
+            <Text style={{fontSize: 16, color: color}}>{this.props.name}</Text>
           </View>
           <View style={{flexDirection: 'row'}}>
             <TouchableOpacity activeOpacity={0.7} 

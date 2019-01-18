@@ -10,11 +10,11 @@ export default class Input extends Component {
     const { text } = this.state
     return (
       <View style={{
-        height: 45,
+        height: 50,
         borderBottomColor: '#f1f1f1',
-        borderBottomWidth: 2,
-        paddingVertical: 10,
-        paddingHorizontal: 15
+        borderBottomWidth: 5,
+        paddingVertical: 15,
+        paddingHorizontal: 15,
     }}>
         <TextInput style={{
             fontSize: 18,
