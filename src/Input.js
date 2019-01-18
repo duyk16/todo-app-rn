@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput, StyleSheet } from 'react-native'
+import { View, TextInput } from 'react-native'
 
 export default class Input extends Component {
   state = {
