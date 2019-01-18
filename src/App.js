@@ -9,6 +9,17 @@ import Input from './Input'
 import Item from './Item';
 
 export default class App extends Component {
+  constructor(props, context) {
+    super(props, context)
+    this.state = {
+      todoList: [
+        {isDone: false, name: 'Check email'},
+        {isDone: false, name: 'Take a shower'}
+
+      ]
+    }
+  }
+  
   render() {
     return (
       <View style={{flex: 1}}>
@@ -19,6 +30,8 @@ export default class App extends Component {
         <View style={{flex: 80}}>
           <Input />
           <ScrollView >
+
+
             <Item />
           </ScrollView>
         </View>

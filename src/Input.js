@@ -6,7 +6,7 @@ export default class Input extends Component {
     return (
       <View style={{
         height: 45,
-        borderBottomColor: '#ccc',
+        borderBottomColor: '#f1f1f1',
         borderBottomWidth: 2,
         paddingVertical: 10,
         paddingHorizontal: 15
