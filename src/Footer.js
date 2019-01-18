@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 
 export default class Footer extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>Remove completed items</Text>
-      </View>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => this.props.deleteItemsDone()}>
+        <View style={styles.container}>
+          <Text style={styles.text}>Remove completed items</Text>
+        </View>
+      </TouchableOpacity>
     )
   }
 }

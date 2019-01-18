@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 import { Text, View, TextInput, StyleSheet } from 'react-native'
 
 export default class Input extends Component {
+  state = {
+    text: ''
+  }
+
   render() {
+    const { text } = this.state
     return (
       <View style={{
         height: 45,
@@ -13,10 +18,13 @@ export default class Input extends Component {
     }}>
         <TextInput style={{
             fontSize: 18,
+            
         }} 
             autoFocus={true}
             placeholder="Enter an item!"
             placeholderTextColor='#999'
+            onChangeText={(text) => this.setState({text})}
+            onSubmitEditing={(e) => this.props.addItem(text, e)}
         />
       </View>
     )
